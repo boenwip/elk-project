@@ -91,8 +91,8 @@ We have installed the following Beats on these machines:
 - Metricbeats
 
 These Beats allow us to collect the following information from each machine:
-Filebeat collects system log data from the webservers. Data you can expect to see can be anything from 	external IP addresses to changes in instances and services.
-Metricbeat allows us to retrieve visual hardware data from the webservers, including changes in CPU usage, memory usage and changes to the file system.
+Filebeat collects system log data and log events from the webservers. Data you can expect to see can be anything from external IP addresses to changes in instances and services.
+Metricbeat allows us to retrieve visual metric data from the webservers, including changes in CPU usage, memory usage and changes to the file system.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -110,7 +110,7 @@ SSH into the control node and follow the steps below:
 10.1.0.5 ansible_python_interpreter=/usr/bin/python3 
 ```
 - Run the playbook, and navigate to the `http://publicip:5601` machine to check that the installation worked as expected. Your ELK machine should be configured to allow public access from your local machine.
-- Also be sure to configure your `.config` files to allow the IP and ports of ELK.
+- Also be sure to configure your `xx-config.yml` files to allow the IP and ports of ELK.
 
 ### **Bonus**
 
