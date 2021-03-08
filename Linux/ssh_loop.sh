@@ -4,7 +4,11 @@ hosts=('10.0.0.6'
         '10.0.0.7'
         '10.0.0.9')
 
-for host in ${hosts[@]};
+flag=false
+while  [ flag != true ]
 do
-ssh azadmin@$host
+        for i in ${hosts[@]}
+                do
+                ssh azadmin@$i
+                done
 done
